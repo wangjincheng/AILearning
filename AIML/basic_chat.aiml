@@ -1,0 +1,56 @@
+<aiml version="1.0.1" encoding="UTF-8">
+<!-- basic_chat.aiml -->
+    <category>
+        <pattern>HELLO</pattern>
+        <template>
+            Well, hello!
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>SHALL WE TALK</pattern>
+        <template>
+            sure, what topic do you prefer?
+            Movie or Sport?
+        </template>
+    </category>
+
+    <category>
+        <pattern>MOVIE</pattern>
+        <template>
+            OK
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>WHAT ARE YOU</pattern>
+        <template>
+            Movie Fan, Of Course!
+        </template>
+    </category>
+
+    <category>
+        <pattern>I LIKE *</pattern>
+        <template>
+            sure, who doesn't like<star/>?
+            <think>
+                <set name="likemovie">
+                    <star/>
+                </set>
+            </think>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HOW ABOUT *</pattern>
+        <template>
+            I think
+            <get name="likemovie"></get>
+            is better
+        </template>
+    </category>
+
+
+</aiml>
